@@ -54,7 +54,7 @@ public class PessoaResource {
         return ResponseEntity.status(HttpStatus.CREATED).body(pessoaSalva);
     }
 
-    @GetMapping("/{id")
+    @GetMapping("/{id}")
     public ResponseEntity<?> buscarPeloId(@PathVariable Long id){
         Optional<Pessoa> pessoa = pessoaRepository.findById(id);
         return pessoa.isPresent() ? 
